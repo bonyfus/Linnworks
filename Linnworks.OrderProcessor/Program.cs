@@ -57,6 +57,7 @@ namespace Linnworks.OrderProcessor
                c.For<IFileReader>().Use<DiskFileReader>();
                c.For<IOrderDataProcessor>().Use<OrderDataProcessor>();
                c.For<IFileWriter>().Use<CsvFileWriter>();
+               c.For<IDeserializer>().Use<JsonDeserializer>();
            });
         }
     }
